@@ -32,7 +32,7 @@ package com.arexperiments.justaline.rendering;
 
 import android.opengl.GLES20;
 import android.opengl.Matrix;
-import android.util.Log;
+import android.log.Log;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

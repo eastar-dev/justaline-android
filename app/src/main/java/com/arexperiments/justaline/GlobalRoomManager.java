@@ -15,7 +15,7 @@
 package com.arexperiments.justaline;
 
 import android.content.Context;
-import android.util.Log;
+import android.log.Log;
 
 import com.arexperiments.justaline.model.RoomData;
 import com.google.firebase.database.DataSnapshot;

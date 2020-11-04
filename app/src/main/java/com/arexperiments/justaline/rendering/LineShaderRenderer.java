@@ -22,7 +22,7 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.GLUtils;
 import android.opengl.Matrix;
-import android.util.Log;
+import android.log.Log;
 
 import com.arexperiments.justaline.R;
 import com.arexperiments.justaline.model.Stroke;

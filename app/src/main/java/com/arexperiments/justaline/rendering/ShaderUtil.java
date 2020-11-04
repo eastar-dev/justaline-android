@@ -16,7 +16,7 @@ package com.arexperiments.justaline.rendering;
 
 import android.content.Context;
 import android.opengl.GLES20;
-import android.util.Log;
+import android.log.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;

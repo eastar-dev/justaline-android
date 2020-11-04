@@ -16,7 +16,7 @@ package com.arexperiments.justaline;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
+import android.log.Log;
 
 import com.arexperiments.justaline.view.PairView;
 import com.google.ar.core.Anchor;

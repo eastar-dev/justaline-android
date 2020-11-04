@@ -14,15 +14,16 @@
 
 package com.arexperiments.justaline.analytics;
 
+import android.log.Log;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.arexperiments.justaline.App;
 import com.arexperiments.justaline.BuildConfig;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.crash.FirebaseCrash;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 
 /**
@@ -88,9 +89,9 @@ public class Fa {
      * Send an event along with one parameter whose value is a String (convenience method)
      */
     public void send(
-            @NonNull String event,
-            @NonNull String customParam1Name,
-            @NonNull String customParam1Value) {
+        @NonNull String event,
+        @NonNull String customParam1Name,
+        @NonNull String customParam1Value) {
         Log.v(TAG, event + " " + customParam1Name + ": " + customParam1Value);
         if (fa == null) return;
         Bundle b = new Bundle();
@@ -102,9 +103,9 @@ public class Fa {
      * Send an event along with one parameter whose value is an int (convenience method)
      */
     public void send(
-            @NonNull String event,
-            @NonNull String customParam1Name,
-            int customParam1Value) {
+        @NonNull String event,
+        @NonNull String customParam1Name,
+        int customParam1Value) {
         Bundle b = new Bundle();
         b.putInt(customParam1Name, customParam1Value);
         send(event, b);
@@ -115,11 +116,11 @@ public class Fa {
      * (convenience method)
      */
     public void send(
-            @NonNull String event,
-            @NonNull String customParam1Name,
-            @NonNull String customParam1Value,
-            @NonNull String customParam2Name,
-            @NonNull String customParam2Value) {
+        @NonNull String event,
+        @NonNull String customParam1Name,
+        @NonNull String customParam1Value,
+        @NonNull String customParam2Name,
+        @NonNull String customParam2Value) {
         Bundle b = new Bundle();
         b.putString(customParam1Name, customParam1Value);
         b.putString(customParam2Name, customParam2Value);
@@ -134,7 +135,7 @@ public class Fa {
         if (BuildConfig.DEBUG) {
             return;
         }
-        FirebaseCrash.report(throwable);
+        FirebaseCrashlytics.getInstance().recordException(throwable);
     }
 
     /**
@@ -146,8 +147,8 @@ public class Fa {
             return;
         }
 
-        FirebaseCrash.logcat(Log.WARN, TAG, logMessage);
-        FirebaseCrash.report(throwable);
+        FirebaseCrashlytics.getInstance().log(logMessage);
+        FirebaseCrashlytics.getInstance().recordException(throwable);
     }
 
     /**

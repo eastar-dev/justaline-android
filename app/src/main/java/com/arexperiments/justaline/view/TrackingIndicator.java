@@ -18,9 +18,9 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.PowerManager;
-import android.support.constraint.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import android.util.AttributeSet;
-import android.util.Log;
+import android.log.Log;
 import android.view.View;
 import android.widget.TextView;
 
