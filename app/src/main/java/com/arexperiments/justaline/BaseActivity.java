@@ -15,6 +15,7 @@
 package com.arexperiments.justaline;
 
 import android.annotation.SuppressLint;
+import android.log.LogActivity;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +33,7 @@ import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationExceptio
  */
 
 @SuppressLint("Registered")
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends LogActivity {
 
 
     @Override
